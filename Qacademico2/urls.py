@@ -22,6 +22,5 @@ def teste(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('MyAuth/', include('MyAuth.urls')),
     path('',teste, name='home'),
 ]
