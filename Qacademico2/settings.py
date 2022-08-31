@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< Updated upstream
     'Qacademico2'
+=======
+    'Qacademico2',
+    'aluno.apps.alunoConfig',
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
