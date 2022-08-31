@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
 from django.test import TestCase
 
 # Create your tests here.
-=======
 """Testes da aplicação Aluno"""
 from django.test import TestCase
 import json
@@ -32,4 +30,3 @@ class AlunoTestCase(TestCase):
         response_delete = self.client.delete("/aluno/remove/123/")
 
         self.assertEqual(response_delete.status_code, 200)
->>>>>>> Stashed changes
