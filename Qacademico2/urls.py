@@ -1,3 +1,4 @@
+<<<<<<< branch_rondy
 """Qacademico2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,13 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from xml.etree.ElementInclude import include
+=======
+>>>>>>> local
 from django.contrib import admin
 from django.urls import path, include
 <<<<<<< Updated upstream
 from django.shortcuts import render
+from django.conf import settings
+from django.conf.urls.static import static
 
-def teste(request):
-    return render(request, "Qacademico2/index.html")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +33,10 @@ urlpatterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("aluno/", include("aluno.urls")),
+<<<<<<< branch_rondy
 >>>>>>> Stashed changes
 ]
+=======
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> local

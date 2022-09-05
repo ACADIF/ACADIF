@@ -1,3 +1,4 @@
+<<<<<<< branch_rondy
 <<<<<<< Updated upstream
 """ORM do usuario"""
 from django.db import models
@@ -10,6 +11,8 @@ class Aluno(models.Model):
     name = models.CharField(max_length=140)
     matricula = models.DateTimeField(max_length=140,primary_key=True)
 =======
+=======
+>>>>>>> local
 """Modelo base do ALUNO"""
 from django.db import models
 
