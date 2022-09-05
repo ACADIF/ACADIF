@@ -25,17 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< Updated upstream
-    'Qacademico2'
-=======
     'Qacademico2',
     'aluno.apps.alunoConfig',
-<<<<<<< branch_rondy
->>>>>>> Stashed changes
-=======
     'disciplina.apps.DisciplinaConfig',
     'turma.apps.TurmaConfig',
->>>>>>> local
 ]
 
 MIDDLEWARE = [

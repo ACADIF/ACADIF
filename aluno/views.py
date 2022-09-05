@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
 from django.shortcuts import render
 
 # Create your views here.
-=======
 """Views do ALUNO"""
 from django.shortcuts import HttpResponse
 from django.shortcuts import render
@@ -48,4 +46,3 @@ def delete_Aluno(request, Aluno_matricula):
     post.delete()
 
     return HttpResponse("Deletado com sucesso.")
->>>>>>> Stashed changes
