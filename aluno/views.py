@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 """Views do ALUNO"""
 from django.shortcuts import HttpResponse
 from django.shortcuts import render
@@ -11,25 +8,13 @@ from django.views.decorators.http import require_http_methods
 from aluno.models import Aluno
 
 @require_http_methods(["GET"])
-def get_Aluno(request):
-    """Retorna os dados de um aluno especifico"""
+def get_Alunos(request):
+    """Retorna os dados de todos os aluno"""
     aluno = Aluno.objects.all()
 
     resp_json = serializers.serialize("json", aluno)
 
     return HttpResponse (resp_json, content_type="application/json")
-
-@ require_http_methods ([ "GET" ])
-def  get_postagem ( request , Aluno_id ):
-    """Retorna todas as postagens."""
-    aluno  =  Aluno.objetos.filtro( pk = Aluno_id)
-
-    postagem_json  =  serializers.serialize("json",aluno)
-
-    return  HttpResponse(postagem_json,content_type="application/json")
-
-
-
 
 @require_http_methods(["POST"])
 def post_Aluno(request):
