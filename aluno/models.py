@@ -3,5 +3,13 @@ from django.db import models
 
 class Aluno(models.Model):
     """Dados do ALUNO"""
+    alvos = (
+        ("Ci","Concluiu"),
+        ("Co","Cursando")
+    )
     nome = models.CharField(max_length=30)
-    mat = models.IntegerField(primary_key=True)
+    matricula = models.IntegerField(primary_key=True)
+    cpf = models.IntegerField(unique=True)
+    born = models.DateField()
+    endereco = models.CharField(max_length=120)
+    estado = models.CharField(max_length=210, choices=alvos)

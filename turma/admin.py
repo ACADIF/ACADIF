@@ -2,7 +2,7 @@ from django.contrib import admin
 from aluno.models import Aluno
 from disciplina.models import disciplina
 from turma.models import turma_semestre
-from professor.models import Professor
+from professor.models import Professor, Titulo
 # Register your models here.
 
 class PerfilAdmin(admin.ModelAdmin):
@@ -18,3 +18,4 @@ admin.site.register(turma_semestre)
 admin.site.register(Aluno)
 admin.site.register(disciplina)
 admin.site.register(Professor)
+admin.site.register(Titulo)

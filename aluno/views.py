@@ -31,3 +31,13 @@ def delete_Aluno(request, Aluno_matricula):
     post.delete()
 
     return HttpResponse("Deletado com sucesso.")
+
+@require_http_methods(["GET"])
+def get_aluno(request, aluno_id):
+    """Retorna aluno especifico."""
+    aluno = Aluno.objects.filter(pk=aluno_id)
+
+    aluno_json = serializers.serialize("json", aluno)
+
+    return HttpResponse(aluno_json , content_type="application/json")
+
