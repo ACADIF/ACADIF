@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Qacademico2',
+    'SIGAPI',
     'aluno.apps.alunoConfig',
     'disciplina.apps.DisciplinaConfig',
     'turma.apps.TurmaConfig',
@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Qacademico2.urls'
+ROOT_URLCONF = 'SIGAPI.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Qacademico2.wsgi.application'
+WSGI_APPLICATION = 'SIGAPI.wsgi.application'
 
 
 # Database
