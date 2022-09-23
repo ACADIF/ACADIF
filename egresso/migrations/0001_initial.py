@@ -15,9 +15,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Aluno',
+            name='Engresso',
             fields=[
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, related_name='Aluno', serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('nome', models.CharField(max_length=40)),
                 ('matricula', models.IntegerField(unique=True)),
                 ('endereco', models.CharField(max_length=120)),
                 ('born', models.DateField()),

@@ -1,5 +1,6 @@
 from pathlib import Path
-
+import os
+import rest_framework.permissions
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,8 +30,18 @@ INSTALLED_APPS = [
     'aluno.apps.alunoConfig',
     'disciplina.apps.DisciplinaConfig',
     'turma.apps.TurmaConfig',
-    'professor.apps.ProfessorConfig'
+    'professor.apps.ProfessorConfig',
+    'egresso.apps.EgressoConfig',
+    'pais_de_aluno.apps.PaisDeAlunoConfig',
+    'curso.apps.CursoConfig',
+    'rest_framework',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
