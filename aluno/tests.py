@@ -1,3 +1,5 @@
+from django.test import TestCase
+
 """Testes da aplicação Aluno"""
 from django.test import TestCase
 import json
@@ -24,8 +26,7 @@ class AlunoTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
     
     def tests_get_Aluno_especifico(self):
-        
-            response = self.client.get("/aluno/get/123/")
+            response = self.client.get("/aluno/get/1/")
 
             resp_dict = json.loads(response.content)
 
